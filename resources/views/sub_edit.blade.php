@@ -7,16 +7,16 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Edit Sub
+    Sub Create
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+  <link href="{!! asset('assets/css/material-dashboard.css?v=2.1.1') !!}" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="{!! asset('assets/demo/demo.css') !!}" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -34,36 +34,14 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/dashboard">
-              <i class="material-icons">home</i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/login">
-              <i class="material-icons">person</i>
-              <p>User Profile</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/kategori">
-              <i class="material-icons">content_paste</i>
-              <p>Kategori</p>
-            </a>
-          </li>
+
           <li class="nav-item active">
             <a class="nav-link" href="/sub">
-              <i class="material-icons">library_books</i>
-              <p>Sub Kategori</p>
+              <i class="material-icons">fast_rewind</i>
+              <p>Kembali</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/transaksi">
-              <i class="material-icons">assignment</i>
-              <p>Transaksi</p>
-            </a>
-          </li>
+
         </ul>
       </div>
     </div>
@@ -134,26 +112,27 @@
         </div>
       </nav>
 
+
+@section('content')
+
       <div class="content">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h3 class="card-title ">Sub Kategori</h3>
+                  <h3 class="card-title "> Edit Sub Kategori</h3>
                   <p class="card-category"> HIYA HIYA HIYA </p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table">
 
-@section('content')
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>Edit Kategori</h1>
             <hr>
             @foreach($data as $datas)
             <form action="{{ route('sub.update', $datas->id) }}" method="post">
@@ -191,7 +170,6 @@
     </section>
     <!-- /.main-section -->
 
-    
         <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">

@@ -46,7 +46,7 @@
               <p>User Profile</p>
             </a>
           </li>
-          <li class="nav-item active ">
+          <li class="nav-item active">
             <a class="nav-link" href="/kategori">
               <i class="material-icons">content_paste</i>
               <p>Kategori</p>
@@ -126,13 +126,7 @@
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">Log out</a>
-
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                </form>
+                  <a class="dropdown-item" href="#">Log out</a>
                 </div>
               </li>
             </ul>
@@ -151,10 +145,10 @@
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
-                    <table class="table">@section('content')
-
+                    <table class="table">
 
 @section('content')
+
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
@@ -167,7 +161,7 @@
                 </div>
             @endif
             <hr>
-                <a href="kategori/create" class="btn btn-success">Add</a>
+                <a href="/kategori/create" class="btn btn-success">Add</a>
                 <div class="form-group"></div>
             <table class="table table-bordered">
                 <thead>
@@ -199,7 +193,7 @@
             </table>
         </div>
         </section>
-        </table>
+       </table>
         </div>
         </div>
         </div>

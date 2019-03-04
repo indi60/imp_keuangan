@@ -7,16 +7,16 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Transaksi
+    Transaksi Create
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+  <link href="{!! asset('assets/css/material-dashboard.css?v=2.1.1') !!}" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="{!! asset('assets/demo/demo.css') !!}" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -36,7 +36,7 @@
         <ul class="nav">
 
           <li class="nav-item active">
-            <a class="nav-link" href="/kategori">
+            <a class="nav-link" href="/transaksi">
               <i class="material-icons">fast_rewind</i>
               <p>Kembali</p>
             </a>
@@ -118,7 +118,7 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h3 class="card-title ">Create Kategori</h3>
+                  <h3 class="card-title ">Create Transaksi</h3>
                   <p class="card-category"> HIYA HIYA HIYA </p>
                 </div>
                 <div class="card-body">
@@ -126,7 +126,6 @@
                     <table class="table">
 
 
-@section('content')
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
@@ -147,13 +146,11 @@
                     <input type="text" class="form-control" id="keterangan" name="keterangan" value="{{ $datas->keterangan }}">
                 </div>
                 <div class="form-group">
-                    <label for="id">Kategori ID:</label>
-                    <select  id="kategori_id" name="id" class="form-control" value="{{ $datas->kategori_id }}"> 
-                       <option value="1">1</option>
-                       <option value="2">2</option> 
-                       <option value="3">3</option> 
-                       <option value="4">4</option> 
-                       <option value="4">5</option> 
+                    <label for="id">Nama kategori:</label>
+                    <select  id="kategori_id" name="id" class="form-control"> 
+                       @foreach ($kategori as $kategori)
+                       <option value="{{$kategori->id}}">{{$kategori->nama_kategori}}</option>
+                       @endforeach
                        </select>
                 </div>
                 <div class="form-group">
@@ -176,14 +173,12 @@
                     <button type="reset" class="btn btn-md btn-danger">Cancel</button>
                 </div>
             </form>
-                @endforeach
+            @endforeach
         </div>
-
-                         </tbody>
+        <!-- /.content -->
+    </section>
+    <!-- /.main-section -->
             </table>
-        </div>
-        </section>
-        </table>
         </div>
         </div>
         </div>

@@ -145,7 +145,9 @@
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
-                    <table class="table">@section('content')
+                    <table class="table">
+
+    @section('content')
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->

@@ -133,17 +133,28 @@
         <div class="content">
             <!-- Remove This Before You Start -->
             <hr>
-                <a href="http://localhost:8000/transaksi" class="btn-inverse">Kembali</a>
             <div class="form-group"></div>
             <form action="{{ route('transaksi.store') }}" method="post">
                 {{ csrf_field() }}
-                <div class="form-group">
-                    <label for="kodesub">Tanggal:</label>
+                <div class="form-group has=feedback{{ $errors->has('tanggal') ? ' has-error' : '' }}">
+                    <label for="tanggal">Tanggal:</label>
                     <input type="date" class="form-control" id="tanggal" name="tanggal" >
+                     @if ($errors->has('tanggal'))
+                    <span class="help-block">
+                      <p>{{ $errors->first('tanggal') }}</p>
+                    </span>
+                      
+                    @endif
                 </div>
-                <div class="form-group">
-                    <label for="namasub">Keterangan:</label>
+                <div class="form-group has=feedback{{ $errors->has('keterangan') ? ' has-error' : '' }}">
+                    <label for="keterangan">Keterangan:</label>
                     <input type="text" class="form-control" id="keterangan" name="keterangan" >
+                     @if ($errors->has('keterangan'))
+                    <span class="help-block">
+                      <p>{{ $errors->first('keterangan') }}</p>
+                    </span>
+                      
+                    @endif
                 </div>
                 <div class="form-group">
                     <label for="id">Nama Kategori:</label>

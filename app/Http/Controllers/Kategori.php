@@ -38,6 +38,10 @@ class Kategori extends Controller
      */
     public function store(Request $request)
     {
+            $this->validate(request(), [
+            'kode' => 'required',
+            'nama' => 'required',
+        ]);
         $data = new ModelKontak();
         $data->kode_kategori = $request->kode;
         $data->nama_kategori = $request->nama;

@@ -40,7 +40,11 @@ class Sub extends Controller
      */
     public function store(Request $request)
     {
-            $data = new ModelSub();
+       $this->validate(request(), [
+            'kodesub' => 'required',
+            'namasub' => 'required',
+        ]);
+        $data = new ModelSub();
         $data->kode_sub_kategori = $request->kodesub;
         $data->nama_sub_kategori = $request->namasub;
         $data->kategori_id = $request->kategori_id;

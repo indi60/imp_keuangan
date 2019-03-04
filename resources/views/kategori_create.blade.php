@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Sub Create
+    Kategori Create
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -16,7 +16,7 @@
   <!-- CSS Files -->
   <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="{{ asset('assets/demo/demo.css') }}" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -125,8 +125,8 @@
                   <div class="table-responsive">
                     <table class="table">
 
-
 @section('content')
+
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
@@ -134,17 +134,28 @@
             <!-- Remove This Before You Start -->
 
             <hr>
-            <a href="http://localhost:8000/kategori" class="btn-inverse">Kembali</a>
             <div class="form-group"></div>
             <form action="{{ route('kategori.store') }}" method="post">
                 {{ csrf_field() }}
-                <div class="form-group">
+                <div class="form-group has=feedback{{ $errors->has('kode') ? ' has-error' : '' }}">
                     <label for="kode">Kode:</label>
                     <input type="text" class="form-control" id="kode_kategori" name="kode" >
+                    @if ($errors->has('kode'))
+                    <span class="help-block">
+                      <p>{{ $errors->first('kode') }}</p>
+                    </span>
+                      
+                    @endif
                 </div>
-                <div class="form-group">
+                <div class="form-group has=feedback{{ $errors->has('nama') ? ' has-error' : '' }}">
                     <label for="nama">nama:</label>
                     <input type="text" class="form-control" id="nama_kategori" name="nama" >
+                    @if ($errors->has('nama'))
+                    <span class="help-block">
+                      <p>{{ $errors->first('nama') }}</p>
+                    </span>
+                      
+                    @endif
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-md btn-primary">Submit</button>
@@ -156,7 +167,7 @@
             </table>
         </div>
         </section>
-        </table>
+         </table>
         </div>
         </div>
         </div>
@@ -172,6 +183,30 @@
 
         <footer class="footer">
         <div class="container-fluid">
+          <nav class="float-left">
+            <ul>
+              <li>
+                <a href="https://www.creative-tim.com">
+                  Creative Tim
+                </a>
+              </li>
+              <li>
+                <a href="https://creative-tim.com/presentation">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.creative-tim.com">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="https://www.creative-tim.com/license">
+                  Licenses
+                </a>
+              </li>
+            </ul>
+          </nav>
           <div class="copyright float-right">
             &copy;
             <script>

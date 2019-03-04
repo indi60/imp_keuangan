@@ -42,6 +42,10 @@ class Transaksi extends Controller
      */
     public function store(Request $request)
     {
+       $this->validate(request(), [
+            'tanggal' => 'required',
+            'keterangan' => 'required',
+        ]);
         $data = new ModelTransaksi();
         $data->tanggal = $request->tanggal;
         $data->keterangan = $request->keterangan;
@@ -75,7 +79,11 @@ class Transaksi extends Controller
     {
        $data = ModelTransaksi::where('id',$id)->get();
 
-        return view('transaksi_edit',compact('data'));
+        $kategori = ModelKontak::all();
+
+         $sub = ModelSub::all();  
+
+         return view('transaksi_edit',compact('sub','kategori','data'));
     }
 
     /**
