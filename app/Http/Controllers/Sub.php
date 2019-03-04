@@ -40,6 +40,10 @@ class Sub extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate(request(), [
+            'kodesub' => 'required',
+            'namasub' => 'required',
+         ]);   
             $data = new ModelSub();
         $data->kode_sub_kategori = $request->kodesub;
         $data->nama_sub_kategori = $request->namasub;
@@ -69,7 +73,7 @@ class Sub extends Controller
     {
         $data = ModelSub::where('id',$id)->get();
 
-        return view('subedit',compact('data'));
+        return view('sub_edit',compact('data'));
     }
 
     /**
