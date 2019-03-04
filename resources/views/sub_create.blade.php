@@ -16,7 +16,7 @@
   <!-- CSS Files -->
   <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="{{ asset('assets/demo/demo.css') }}" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -133,7 +133,7 @@
             <!-- Remove This Before You Start -->
 
             <hr>
-                <a href="http://localhost:8000/sub" class="btn-inverse">Kembali</a>
+             
             <div class="form-group"></div>
             <form action="{{ route('sub.store') }}" method="post">
                 {{ csrf_field() }}

@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    LOG IN
+    Log In
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -34,45 +34,28 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/">
-              <i class="material-icons">home</i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li class="nav-item ">
+          <li class="nav-item active ">
             <a class="nav-link" href="/login">
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
           </li>
-          <li class="nav-item active ">
-            <a class="nav-link" href="/kategori">
-              <i class="material-icons">content_paste</i>
-              <p>Kategori</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/sub">
-              <i class="material-icons">library_books</i>
-              <p>Sub Kategori</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/transaksi">
-              <i class="material-icons">assignment</i>
-              <p>Transaksi</p>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">
+              <i class="material-icons">chrome_reader_mode</i>
+              <p>Register</p>
             </a>
           </li>
         </ul>
       </div>
+
     </div>
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">Dashboard</a>
+            <a class="navbar-brand" href="/">Dashboard</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -146,8 +129,8 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h3 class="card-title ">LOG IN</h3>
-                  <p class="card-category"> HIYA HIYA HIYA </p>
+                  <h3 class="card-title ">Log In</h3>
+                  <p class="card-category"> My Creative Tim </p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -163,7 +146,7 @@
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
-
+<br>
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
@@ -177,7 +160,7 @@
                                 @endif
                             </div>
                         </div>
-
+<br>
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 

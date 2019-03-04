@@ -37,7 +37,7 @@
           <li class="nav-item active">
             <a class="nav-link" href="/">
               <i class="material-icons">home</i>
-              <p>Dashboard</p>
+              <p>Home</p>
             </a>
           </li>
           <li class="nav-item ">

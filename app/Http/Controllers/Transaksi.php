@@ -75,7 +75,11 @@ class Transaksi extends Controller
     {
        $data = ModelTransaksi::where('id',$id)->get();
 
-        return view('transaksi_edit',compact('data'));
+        $kategori = ModelKontak::all();
+
+         $sub = ModelSub::all();  
+
+         return view('transaksi_edit',compact('sub','kategori','data'));
     }
 
     /**
