@@ -27,6 +27,8 @@ Route::resource('/sub', 'sub');
 Route::resource('/login', 'login');
 
 
+
+
 Route::get('/', function () {
   	   return view('dashboard');
 });
@@ -75,6 +77,13 @@ Route::group(['prefix' => 'user', 'middleware' => 'User'], function () {
 });
 		Route::resource('/kategori', 'kategori');
 		// 	Route::get('/create', 'kategori@create');
+<<<<<<< HEAD
+=======
+
+		Route::resource('/sub', 'sub');
+		// 	Route::get('/create', 'kategori@create');
+	});
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
 
 		Route::resource('/sub', 'sub');
 		// 	Route::get('/create', 'kategori@create');

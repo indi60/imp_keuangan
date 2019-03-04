@@ -7,16 +7,16 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Sub Create
+    Kategori
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="{!! asset('assets/css/material-dashboard.css?v=2.1.1') !!}" rel="stylesheet" />
+  <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="{!! asset('assets/demo/demo.css') !!}" rel="stylesheet" />
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -34,14 +34,36 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-
-          <li class="nav-item active">
-            <a class="nav-link" href="/sub">
-              <i class="material-icons">fast_rewind</i>
-              <p>Kembali</p>
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="material-icons">home</i>
+              <p>Home</p>
             </a>
           </li>
-
+          <li class="nav-item ">
+            <a class="nav-link" href="/login">
+              <i class="material-icons">person</i>
+              <p>User Profile</p>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/kategori">
+              <i class="material-icons">content_paste</i>
+              <p>Kategori</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/sub">
+              <i class="material-icons">library_books</i>
+              <p>Sub Kategori</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/transaksi">
+              <i class="material-icons">assignment</i>
+              <p>Transaksi</p>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -104,7 +126,7 @@
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" href="/home">Log out</a>
                 </div>
               </li>
             </ul>
@@ -112,90 +134,13 @@
         </div>
       </nav>
 
-
-@section('content')
-
       <div class="content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header card-header-primary">
-                  <h3 class="card-title "> Edit Sub Kategori</h3>
-                  <p class="card-category"> HIYA HIYA HIYA </p>
-                </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table">
-
-    <!-- Main Section -->
-    <section class="main-section">
-        <!-- Add Your Content Inside -->
-        <div class="content">
-            <!-- Remove This Before You Start -->
-            <hr>
-            @foreach($data as $datas)
-            <form action="{{ route('sub.update', $datas->id) }}" method="post">
-                {{ csrf_field() }}
-                {{ method_field('PUT') }}
-                <div class="form-group">
-                    <label for="kodesub">Kode Sub:</label>
-                    <input type="text" class="form-control" id="kode_sub_kategori" name="kode_sub_kategori" value="{{ $datas->kode_sub_kategori }}">
-                </div>
-                <div class="form-group">
-                    <label for="namasub">Nama Sub:</label>
-                    <input type="text" class="form-control" id="nama_sub_kategori" name="nama_sub_kategori" value="{{ $datas->nama_sub_kategori }}">
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-md btn-primary">Submit</button>
-                    <button type="reset" class="btn btn-md btn-danger">Cancel</button>
-                </div>
-            </form>
-            @endforeach
-                </tbody>
-            </table>
-        </div>
-        </section>
-        </table>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
+      @yield('content')
+     </div>
         <!-- /.content -->
-    </section>
     <!-- /.main-section -->
-
-        <footer class="footer">
+     <footer class="footer">
         <div class="container-fluid">
-          <nav class="float-left">
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="https://creative-tim.com/presentation">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
-                </a>
-              </li>
-            </ul>
-          </nav>
           <div class="copyright float-right">
             &copy;
             <script>

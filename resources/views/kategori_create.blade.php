@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,6 +114,10 @@
       </nav>
 
             <div class="content">
+=======
+@extends('layouts.sidebar')
+@section('content')
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
@@ -125,8 +130,11 @@
                   <div class="table-responsive">
                     <table class="table">
 
+<<<<<<< HEAD
 @section('content')
 
+=======
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
@@ -176,6 +184,7 @@
         </div>
         </div>
         </div>
+<<<<<<< HEAD
         </div>
         <!-- /.content -->
     </section>
@@ -510,3 +519,7 @@
 </body>
 
 </html>
+=======
+@endsection
+      
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61

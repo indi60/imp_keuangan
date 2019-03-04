@@ -1,5 +1,6 @@
 @extends('base')
 @section('content')
+<<<<<<< HEAD
       <div class="content">
         <div class="container-fluid">
           <div class="row">
@@ -13,6 +14,8 @@
                   <div class="table-responsive">
                     <table class="table">
 
+=======
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
@@ -38,6 +41,7 @@
             </form>
             @endforeach
         </div>
+<<<<<<< HEAD
                 </table>
         </div>
         </div>
@@ -48,6 +52,8 @@
         </div>
         </div>
         </div>
+=======
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
         <!-- /.content -->
     </section>
     <!-- /.main-section -->

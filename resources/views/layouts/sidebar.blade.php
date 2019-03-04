@@ -7,16 +7,20 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
+<<<<<<< HEAD:resources/views/sub_edit.blade.php
+    Sub Create
+=======
     Sub Kategori
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61:resources/views/layouts/sidebar.blade.php
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+  <link href="{!! asset('assets/css/material-dashboard.css?v=2.1.1') !!}" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="{!! asset('assets/demo/demo.css') !!}" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -34,10 +38,13 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
+<<<<<<< HEAD:resources/views/sub_edit.blade.php
+
+=======
           <li class="nav-item">
             <a class="nav-link" href="/">
               <i class="material-icons">home</i>
-              <p>Dashboard</p>
+              <p>Home</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -52,18 +59,14 @@
               <p>Kategori</p>
             </a>
           </li>
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61:resources/views/layouts/sidebar.blade.php
           <li class="nav-item active">
             <a class="nav-link" href="/sub">
-              <i class="material-icons">library_books</i>
-              <p>Sub Kategori</p>
+              <i class="material-icons">fast_rewind</i>
+              <p>Kembali</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/transaksi">
-              <i class="material-icons">assignment</i>
-              <p>Transaksi</p>
-            </a>
-          </li>
+
         </ul>
       </div>
     </div>
@@ -134,12 +137,73 @@
         </div>
       </nav>
 
+
+@section('content')
+
       <div class="content">
+<<<<<<< HEAD:resources/views/sub_edit.blade.php
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h3 class="card-title "> Edit Sub Kategori</h3>
+                  <p class="card-category"> HIYA HIYA HIYA </p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table">
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <!-- Add Your Content Inside -->
+        <div class="content">
+            <!-- Remove This Before You Start -->
+            <hr>
+            @foreach($data as $datas)
+            <form action="{{ route('sub.update', $datas->id) }}" method="post">
+                {{ csrf_field() }}
+                {{ method_field('PUT') }}
+                <div class="form-group">
+                    <label for="kodesub">Kode Sub:</label>
+                    <input type="text" class="form-control" id="kode_sub_kategori" name="kode_sub_kategori" value="{{ $datas->kode_sub_kategori }}">
+                </div>
+                <div class="form-group">
+                    <label for="namasub">Nama Sub:</label>
+                    <input type="text" class="form-control" id="nama_sub_kategori" name="nama_sub_kategori" value="{{ $datas->nama_sub_kategori }}">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-md btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-md btn-danger">Cancel</button>
+                </div>
+            </form>
+            @endforeach
+                </tbody>
+            </table>
+        </div>
+        </section>
+        </table>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+=======
       @yield('content')
      </div>
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61:resources/views/layouts/sidebar.blade.php
         <!-- /.content -->
     <!-- /.main-section -->
+<<<<<<< HEAD:resources/views/sub_edit.blade.php
+
+        <footer class="footer">
+=======
      <footer class="footer">
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61:resources/views/layouts/sidebar.blade.php
         <div class="container-fluid">
           <div class="copyright float-right">
             &copy;

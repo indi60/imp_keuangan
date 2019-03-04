@@ -73,7 +73,7 @@ class Sub extends Controller
     {
         $data = ModelSub::where('id',$id)->get();
 
-        return view('sub_edit',compact('data'));
+        return view('subedit',compact('data'));
     }
 
     /**
