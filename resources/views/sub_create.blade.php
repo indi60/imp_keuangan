@@ -12,6 +12,7 @@
             <div class="form-group"></div>
             <form action="{{ route('sub.store') }}" method="post">
                 {{ csrf_field() }}
+
                 <div class="form-group{{ $errors->has('kodesub') ? ' has-error' : '' }}">
                     <label for="kodesub">Kode Sub:</label>
                     <input type="text" class="form-control" id="kode_sub_kategori" name="kodesub" >
@@ -29,6 +30,26 @@
                                         <strong>{{ $errors->first('namasub') }}</strong>
                                     </span>
                                 @endif
+
+                <div class="form-group has=feedback{{ $errors->has('kodesub') ? ' has-error' : '' }}">
+                    <label for="kodesub">Kode Sub:</label>
+                    <input type="text" class="form-control" id="kode_sub_kategori" name="kodesub" >
+                    @if ($errors->has('kodesub'))
+                    <span class="help-block">
+                      <p>{{ $errors->first('kodesub') }}</p>
+                    </span>
+                      
+                    @endif
+                </div>
+                <div class="form-group has=feedback{{ $errors->has('namasub') ? ' has-error' : '' }}">
+                    <label for="namasub">Nama Sub:</label>
+                    <input type="text" class="form-control" id="nama_sub_kategori" name="namasub" >
+                   @if ($errors->has('namasub'))
+                    <span class="help-block">
+                      <p>{{ $errors->first('namasub') }}</p>
+                    </span>
+                      
+                    @endif
                 </div>
                 <div class="form-group">
                     <label for="id">Nama Kategori:</label>

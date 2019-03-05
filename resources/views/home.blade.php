@@ -7,7 +7,15 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
+<<<<<<< HEAD
     PROFILE
+=======
+<<<<<<< HEAD
+    Profile
+=======
+    Sub Kategori
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
+>>>>>>> b53be880b67ae6ee07423035f8ef831b5ad46575
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -37,7 +45,11 @@
           <li class="nav-item">
             <a class="nav-link" href="/">
               <i class="material-icons">home</i>
+<<<<<<< HEAD
+              <p>Dashboard</p>
+=======
               <p>Home</p>
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
             </a>
           </li>
           <li class="nav-item active">
@@ -46,7 +58,11 @@
               <p>User Profile</p>
             </a>
           </li>
+<<<<<<< HEAD
+          <li class="nav-item">
+=======
           <li class="nav-item ">
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
             <a class="nav-link" href="/kategori">
               <i class="material-icons">content_paste</i>
               <p>Kategori</p>
@@ -116,7 +132,11 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
+<<<<<<< HEAD
+                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+=======
                 <a class="nav-link" href="" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
                   <i class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
@@ -130,9 +150,15 @@
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Log out</a>
 
+<<<<<<< HEAD
+                                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+=======
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                 </form>
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
                 </div>
               </li>
             </ul>
@@ -146,12 +172,46 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
+<<<<<<< HEAD
                   <h3 class="card-title ">Profile</h3>
+=======
+<<<<<<< HEAD
+                  <h3 class="card-title ">Profile</h3>
+                  <p class="card-category"> HIYA HIYA HIYA </p>
+=======
+                  <h3 class="card-title ">Log Out</h3>
+>>>>>>> b53be880b67ae6ee07423035f8ef831b5ad46575
                   <p class="card-category"> My Creative Tim</p>
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table">
+<<<<<<< HEAD
+             <td>   
+            <h2 class="material-icons">account_circle</h2>
+            <h2>Hallo, {{Session::get('name')}}. Apa anda ingin keluar/log out?</h2>
+            </td>
+
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
+             <td>   
+            <i class="material-icons">account_circle</i>
+            <h2>Hallo, {{Session::get('name')}}. Apa anda ingin keluar/log out?</h2>
+            </td>
+                <div class="panel-body">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    You are logged in!
+=======
 
 @section('content')
 
@@ -162,6 +222,7 @@
             @if(Session::has('alert-success'))
                 <div class="alert alert-success">
                     <strong>{{ \Illuminate\Support\Facades\Session::get('alert-success') }}</strong>
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
                 </div>
             @endif
             <hr>
@@ -250,6 +311,106 @@
         </li>
       </ul>
     </div>
+<<<<<<< HEAD
+</div>
+@endsection
+
+       </table>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- /.content -->
+    </section>
+    <!-- /.main-section -->
+
+        <footer class="footer">
+        <div class="container-fluid">
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>, made with <i class="material-icons">favorite</i> by
+            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+      <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+      </a>
+      <ul class="dropdown-menu">
+        <li class="header-title"> Sidebar Filters</li>
+        <li class="adjustments-line">
+          <a href="javascript:void(0)" class="switch-trigger active-color">
+            <div class="badge-colors ml-auto mr-auto">
+              <span class="badge filter badge-purple" data-color="purple"></span>
+              <span class="badge filter badge-azure" data-color="azure"></span>
+              <span class="badge filter badge-green" data-color="green"></span>
+              <span class="badge filter badge-warning" data-color="orange"></span>
+              <span class="badge filter badge-danger" data-color="danger"></span>
+              <span class="badge filter badge-rose active" data-color="rose"></span>
+            </div>
+            <div class="clearfix"></div>
+          </a>
+        </li>
+        <li class="header-title">Images</li>
+        <li class="active">
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../assets/img/sidebar-1.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../assets/img/sidebar-2.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../assets/img/sidebar-3.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../assets/img/sidebar-4.jpg" alt="">
+          </a>
+        </li>
+        <li class="button-container">
+          <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
+        </li>
+        <!-- <li class="header-title">Want more components?</li>
+            <li class="button-container">
+                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
+                  Get the pro version
+                </a>
+            </li> -->
+        <li class="button-container">
+          <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
+            View Documentation
+          </a>
+        </li>
+        <li class="button-container github-star">
+          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+        </li>
+        <li class="header-title">Thank you for 95 shares!</li>
+        <li class="button-container text-center">
+          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
+          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
+          <br>
+          <br>
+        </li>
+      </ul>
+    </div>
+=======
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
   </div>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
@@ -476,3 +637,7 @@
 
 </html>
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61

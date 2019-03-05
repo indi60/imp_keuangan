@@ -38,6 +38,7 @@ class Kategori extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
         $messages = [
     'required' => ':attribute harus di isi!',
 ];
@@ -45,6 +46,12 @@ class Kategori extends Controller
             'kode' => 'required',
             'nama' => 'required',
          ],$messages); 
+=======
+            $this->validate(request(), [
+            'kode' => 'required',
+            'nama' => 'required',
+        ]);
+>>>>>>> b53be880b67ae6ee07423035f8ef831b5ad46575
         $data = new ModelKontak();
         $data->kode_kategori = $request->kode;
         $data->nama_kategori = $request->nama;

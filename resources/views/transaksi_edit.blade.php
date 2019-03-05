@@ -1,3 +1,4 @@
+
 @extends('layouts.sidebar3')
 @section('content')
     <!-- Main Section -->
@@ -48,6 +49,19 @@
                 </div>
             </form>
             @endforeach
+        </div>
+        <!-- /.content -->
+    </section>
+    <!-- /.main-section -->
+            </table>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
         </div>
         <!-- /.content -->
     </section>

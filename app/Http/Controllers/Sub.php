@@ -40,6 +40,7 @@ class Sub extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
         $messages = [
     'required' => ':attribute harus di isi!',
 ];
@@ -48,6 +49,13 @@ class Sub extends Controller
             'namasub' => 'required',
          ],$messages); 
             $data = new ModelSub();
+=======
+       $this->validate(request(), [
+            'kodesub' => 'required',
+            'namasub' => 'required',
+        ]);
+        $data = new ModelSub();
+>>>>>>> b53be880b67ae6ee07423035f8ef831b5ad46575
         $data->kode_sub_kategori = $request->kodesub;
         $data->nama_sub_kategori = $request->namasub;
         $data->kategori_id = $request->kategori_id;

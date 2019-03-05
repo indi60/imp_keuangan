@@ -19,18 +19,13 @@
 // });
 
 Route::resource('/transaksi', 'transaksi');
-// 	Route::get('/create', 'transaksi@create');
-
 
 Route::resource('/kategori', 'kategori');
-// 	Route::get('/create', 'transaksi@create');
-
 
 Route::resource('/sub', 'sub');
-// 	Route::get('/create', 'transaksi@create');
 
 Route::resource('/login', 'login');
-// 	Route::get('/create', 'transaksi@create');
+
 
 
 
@@ -78,13 +73,20 @@ Route::group(['prefix' => 'admin', 'middleware' => 'Admin'], function () {
 Route::group(['prefix' => 'user', 'middleware' => 'User'], function () {
 		Route::get('/', function () {
   	   return redirect()->to('user/kategori');
-});
 
+});
 		Route::resource('/kategori', 'kategori');
 		// 	Route::get('/create', 'kategori@create');
+<<<<<<< HEAD
+=======
 
 		Route::resource('/sub', 'sub');
 		// 	Route::get('/create', 'kategori@create');
 	});
+>>>>>>> 51429cda2c7a34046a13457eceef78998baabb61
 
+		Route::resource('/sub', 'sub');
+		// 	Route::get('/create', 'kategori@create');
+	
+});
 Route::get('/logout', 'HomeController@logout')->name('logout');
