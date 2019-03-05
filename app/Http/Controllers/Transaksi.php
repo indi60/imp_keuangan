@@ -42,6 +42,14 @@ class Transaksi extends Controller
      */
     public function store(Request $request)
     {
+        $messages = [
+    'required' => ':attribute harus di isi!',
+];
+        $this->validate(request(), [
+            'tanggal' => 'required',
+            'keterangan' => 'required',
+         ],$messages); 
+
         $data = new ModelTransaksi();
         $data->tanggal = $request->tanggal;
         $data->keterangan = $request->keterangan;

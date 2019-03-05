@@ -1,4 +1,4 @@
-@extends('base')
+@extends('layouts.sidebar1')
 @section('content')
     <!-- Main Section -->
     <section class="main-section">

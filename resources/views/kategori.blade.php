@@ -6,7 +6,7 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h3 class="card-title ">Kategori</h3>
-                  <p class="card-category"> Step1 </p>
+                  <p class="card-category"> HIYA HIYA HIYA </p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">

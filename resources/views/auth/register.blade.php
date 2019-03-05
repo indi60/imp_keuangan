@@ -35,7 +35,6 @@
           <span class="login100-form-logo">
             <i class="zmdi zmdi-landscape"></i>
           </span>
-<br>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
@@ -44,7 +43,7 @@
 
                         <div class="wrap-input100 validate-input">
                         <input id="name" type="name" class="input100" name="name" value="{{ old('name') }}" placeholder="Name" required autofocus>
-                                <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                                <span class="focus-input100" data-placeholder="&#xf20e;"></span>
                                 @if ($errors->has('name'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('name') }}</strong>
@@ -52,7 +51,6 @@
                                 @endif
                             </div>
                         </div>
-<br>
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
                         <div class="wrap-input100 validate-input">
@@ -65,12 +63,11 @@
                                 @endif
                             </div>
                         </div>
-<br>
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
 
                         <div class="wrap-input100 validate-input">
-                        <input id="password" type="password" class="input100" name="password" placeholder="Password" required autofocus>
-                                <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                        <input id="password" type="password" class="input100" name="password" placeholder="Password" required>
+                                <span class="focus-input100" data-placeholder="&#xf191;"></span>
                                 @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
@@ -78,12 +75,11 @@
                                 @endif
                             </div>
                         </div>
-<br>
                         <div class="form-group">
 
                             <div class="wrap-input100 validate-input">
-                        <input id="password" type="password" class="input100" name="password_confirmation" placeholder="Password Confirmation" required autofocus>
-                                <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                        <input id="password" type="password" class="input100" name="password_confirmation" placeholder="Password Confirmation" required >
+                                <span class="focus-input100" data-placeholder="&#xf191;"></span>
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password_confirmation') }}</strong>
@@ -101,7 +97,7 @@
                             </center>
                         
                             <div class="text-center p-t-90">
-                                <a class="txt1" href="">
+                                <a class="txt1" >
                                     My Creative Tim khusnul & rizhdan
                                 </a>
                            </div>
